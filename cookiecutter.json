@@ -1,0 +1,20 @@
+{
+    "natural_language": [
+        "en",
+        "ru"
+    ],
+    "project_name": "My Test Python Package",
+    "project_description": "Short description of My Test Python Package",
+    "author_name": "Ivan Ivanov",
+    "author_email": "ivan_ivanov@example",
+    "project_license": [
+        "MIT License",
+        "BSD 2-Clause Simplified",
+        "BSD 3-Clause New",
+        "Apache Software License 2.0",
+        "GNU GPL v3",
+        "GNU AGPL v3",
+        "GNU LGPL v3",
+        "Not open source"
+    ]
+}

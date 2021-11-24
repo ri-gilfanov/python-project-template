@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_name | slugify }}"
+version = "0.1dev0"
+description = "{{ cookiecutter.project_description }}"
+authors = [
+    "{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>",
+]
+classifiers = [
+    "Development Status :: 1 - Planning",
+{% if cookiecutter.project_license == 'MIT License' -%}
+    "",
+{% elif cookiecutter.project_license in ('BSD 2-Clause Simplified', 'BSD 3-Clause New',) -%}
+    "License :: OSI Approved :: BSD License",
+{% elif cookiecutter.project_license == 'Apache Software License 2.0' -%}
+    "License :: OSI Approved :: Apache Software License",
+{% elif cookiecutter.project_license == 'GNU GPL v3' -%}
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+{% elif cookiecutter.project_license == 'GNU AGPL v3' -%}
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+{% elif cookiecutter.project_license == 'GNU LGPL v3' -%}
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+{% endif -%}
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Typing :: Typed",
+]
+keywords = []
+readme = "README.rst"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+flake8 = ">=4.0.1"
+isort = ">=5.10.1"
+mypy = ">=0.910"
+pytest = ">=6.2.5"
+pytest-cov = ">=3.0.0"
+Sphinx = ">=4.3.0"
+sphinx_rtd_theme = ">=1.0.0"
+types-toml = ">=0.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+known_first_party = ["{{ cookiecutter.project_name | slugify(separator='_') }}"]
+known_third_party = ["pytest"]
+profile = "wemake"
+src_paths = ["{{ cookiecutter.project_name | slugify(separator='_') }}", "tests"]
+
+[tool.mypy]
+files = ["{{ cookiecutter.project_name | slugify(separator='_') }}", "tests"]
