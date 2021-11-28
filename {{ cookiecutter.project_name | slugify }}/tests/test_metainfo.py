@@ -1,6 +1,6 @@
 import tomli
 
-from pycsf import __version__
+from {{ cookiecutter.project_name | slugify(separator='_') }} import __version__
 
 
 def test_version() -> None:
