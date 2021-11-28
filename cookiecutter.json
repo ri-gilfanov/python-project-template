@@ -5,8 +5,8 @@
     ],
     "project_name": "My Test Python Package",
     "project_description": "Short description of My Test Python Package",
-    "author_name": "Ivan Ivanov",
-    "author_email": "ivan_ivanov@example",
+    "author_name": "Ruslan Ilyasovich Gilfanov",
+    "author_email": "ri.gilfanov@yandex.ru",
     "project_license": [
         "MIT License",
         "BSD 2-Clause Simplified",
