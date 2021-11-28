@@ -2,23 +2,50 @@
 name = "{{ cookiecutter.project_name | slugify }}"
 version = "0.1dev0"
 description = "{{ cookiecutter.project_description }}"
+{% if cookiecutter.project_license == 'MIT License' -%}
+license = "MIT"
+{% elif cookiecutter.project_license == 'BSD 2-Clause Simplified' -%}
+license = "BSD-2-Clause"
+{% elif cookiecutter.project_license == 'BSD 3-Clause New' -%}
+license = "BSD-3-Clause"
+{% elif cookiecutter.project_license == 'Apache Software License 2.0' -%}
+license = "Apache-2.0"
+{% elif cookiecutter.project_license == 'GNU GPL v3' -%}
+license = "GPL-3.0-or-later"
+{% elif cookiecutter.project_license == 'GNU AGPL v3' -%}
+license = "AGPL-3.0-or-later"
+{% elif cookiecutter.project_license == 'GNU LGPL v3' -%}
+license = "LGPL-3.0-or-later"
+{% endif -%}
+
 authors = [
     "{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>",
 ]
+maintainers = [
+    "{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>",
+]
+
+readme = "README.rst"
+homepage = "https://github.com/ri-gilfanov/{{ cookiecutter.project_name | slugify }}"
+repository = "https://github.com/ri-gilfanov/{{ cookiecutter.project_name | slugify }}"
+documentation = "https://{{ cookiecutter.project_name | slugify }}.readthedocs.io/"
+
+keywords = []
+
 classifiers = [
     "Development Status :: 1 - Planning",
 {% if cookiecutter.project_license == 'MIT License' -%}
-    "",
+    "License :: OSI Approved :: MIT License",
 {% elif cookiecutter.project_license in ('BSD 2-Clause Simplified', 'BSD 3-Clause New',) -%}
     "License :: OSI Approved :: BSD License",
 {% elif cookiecutter.project_license == 'Apache Software License 2.0' -%}
     "License :: OSI Approved :: Apache Software License",
 {% elif cookiecutter.project_license == 'GNU GPL v3' -%}
-    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
 {% elif cookiecutter.project_license == 'GNU AGPL v3' -%}
-    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
 {% elif cookiecutter.project_license == 'GNU LGPL v3' -%}
-    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
 {% endif -%}
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
@@ -26,8 +53,6 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Typing :: Typed",
 ]
-keywords = []
-readme = "README.rst"
 
 [tool.poetry.dependencies]
 python = "^3.9"
