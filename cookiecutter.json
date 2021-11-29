@@ -7,6 +7,9 @@
     "project_description": "Short description of My Test Python Package",
     "author_name": "Ruslan Ilyasovich Gilfanov",
     "author_email": "ri.gilfanov@yandex.ru",
+    "homepage_url": "https://pypi.org/project/{{ cookiecutter.project_name | slugify }}/",
+    "repository_url": "https://github.com/ri-gilfanov/{{ cookiecutter.project_name | slugify }}/",
+    "documentation_url": "https://{{ cookiecutter.project_name | slugify }}.readthedocs.io/",
     "project_license": [
         "MIT License",
         "BSD 2-Clause Simplified",

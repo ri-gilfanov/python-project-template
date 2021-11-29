@@ -26,9 +26,9 @@ maintainers = [
 ]
 
 readme = "README.rst"
-homepage = "https://github.com/ri-gilfanov/{{ cookiecutter.project_name | slugify }}"
-repository = "https://github.com/ri-gilfanov/{{ cookiecutter.project_name | slugify }}"
-documentation = "https://{{ cookiecutter.project_name | slugify }}.readthedocs.io/"
+homepage = "{{ cookiecutter.homepage_url }}"
+repository = "{{ cookiecutter.repository_url }}"
+documentation = "{{ cookiecutter.documentation_url }}"
 
 keywords = []
 
