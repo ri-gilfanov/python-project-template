@@ -8,3 +8,4 @@ def test_version() -> None:
         pyproject = tomli.load(f)
         version = pyproject['tool']['poetry']['version']
         assert __version__ == version
+

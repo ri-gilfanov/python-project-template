@@ -4,7 +4,7 @@
         "ru"
     ],
     "project_name": "My Test Python Package",
-    "project_description": "Short description of My Test Python Package",
+    "project_description": "",
     "author_name": "Ruslan Ilyasovich Gilfanov",
     "author_email": "ri.gilfanov@yandex.ru",
     "homepage_url": "https://pypi.org/project/{{ cookiecutter.project_name | slugify }}/",

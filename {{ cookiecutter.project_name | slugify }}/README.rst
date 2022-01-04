@@ -9,7 +9,7 @@
 {% set docs_subtitle = 'Documentation' -%}
 {% endif -%}
 
-{% for _ in docs_subtitle %}={% endfor %}
+{% for _ in docs_subtitle %}-{% endfor %}
 {{ docs_subtitle }}
-{% for _ in docs_subtitle %}={% endfor %}
+{% for _ in docs_subtitle %}-{% endfor %}
 {{ cookiecutter.documentation_url }}
